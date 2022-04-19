@@ -4,7 +4,7 @@
     <BreezeAuthenticatedLayout>
         <div class="card shadow-sm">
             <div class="card-body">
-                You're logged in!
+                ログイン完了！
             </div>
         </div>
     </BreezeAuthenticatedLayout>
