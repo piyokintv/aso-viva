@@ -18,8 +18,18 @@ $ npm install
 $ php artisan migrate --seed
 $ php artisan serve
 ```
-## Run the project in the sub directory
+## Support a project placed in the sub directory
 
 Please use the branch, dev-support-subdir.
 
 [inertiajs/inertia-laravel](https://github.com/inertiajs/inertia-laravel) (v0.5.4) has an sub directory installation [issue](https://github.com/inertiajs/inertia-laravel/issues/359). The branch has a fix by kimhf.
+
+## See Also
+
+[Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)
+
+[Inertia](https://inertiajs.com)
+
+[Vue](https://vuejs.org)
+
+[Bootstrap](https://getbootstrap.com)
