@@ -3,7 +3,7 @@
         <Head title="パスワード確認" />
 
         <div class="mb-4 text-sm text-muted">
-            This is a secure area of the application. Please confirm your password before continuing.
+            この操作を続けるにはパスワードの確認が必要です。
         </div>
 
         <BreezeValidationErrors class="mb-4" />

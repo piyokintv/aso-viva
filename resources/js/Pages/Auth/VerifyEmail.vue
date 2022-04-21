@@ -2,19 +2,19 @@
    <BreezeGuestLayout>
         <Head title="Email Verification" />
         <div class="mb-4 text-sm text-muted">
-            Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.
+            ご登録ありがとうございます！確認メールを送信しましたので、メール内のリンクをクリックし登録を完了させて下さい。メールが届かない場合は以下のボタンから再送信をお試し下さい。
         </div>
 
         <div class="alert alert-success mb-4" v-if="verificationLinkSent" >
-            A new verification link has been sent to the email address you provided during registration.
+            確認メールを再送信しました。
         </div>
 
         <form @submit.prevent="submit">
             <div class="float-end">
-                <Link :href="route('logout')" method="post" class="text-dark">Log Out</Link>
+                <Link :href="route('logout')" method="post" class="text-dark">ログアウト</Link>
 
                 <button type="submit" class="btn btn-dark ms-3" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Resend Verification Email
+                    再送信する
                 </button>
             </div>
         </form>
