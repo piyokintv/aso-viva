@@ -1,6 +1,6 @@
 <template>
     <div v-if="hasErrors" class="alert alert-danger">
-        <p>Whoops! Something went wrong.</p>
+        <p>おっと! 問題が発生しました。</p>
 
         <ul class="mb-0">
             <li v-for="(error, key) in errors" :key="key">{{ error }}</li>

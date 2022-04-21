@@ -1,6 +1,6 @@
 <template>
     <BreezeGuestLayout>
-        <Head title="Confirm Password" />
+        <Head title="パスワード確認" />
 
         <div class="mb-4 text-sm text-muted">
             This is a secure area of the application. Please confirm your password before continuing.
@@ -10,13 +10,13 @@
 
         <form @submit.prevent="submit">
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">パスワード</label>
                 <input type="password" id="password" class="form-control shadow-sm" v-model="form.password" required autofocus autocomplete="current-password">
             </div>
 
             <div class="float-end">
                 <button type="submit" class="btn btn-dark ms-3" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Confirm
+                    確認
                 </button>
             </div>
         </form>

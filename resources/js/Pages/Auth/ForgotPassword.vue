@@ -2,7 +2,7 @@
     <BreezeGuestLayout>
         <Head title="Forgot Password" />
         <div class="mb-4 text-sm text-secondary">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+            登録時のメールアドレスを入力して下さい。パスワード再設定用のURLをメールでお送りします。
         </div>
 
         <div v-if="status" class="alert alert-success mb-4">
@@ -13,13 +13,13 @@
 
         <form @submit.prevent="submit">
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">メールアドレス</label>
                 <input type="email" id="email" class="form-control shadow-sm" v-model="form.email" required autofocus autocomplete="username">
             </div>
 
             <div class="float-end">
                 <button type="submit" class="btn btn-dark ms-3" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Email Password Reset Link
+                    メール送信
                 </button>
             </div>
         </form>

@@ -27,17 +27,17 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
                                         <Link class="dropdown-item" :href="route('logout')" method="post">
-                                            Log Out
+                                            ログアウト
                                         </Link>
                                     </li>
                                 </ul>
                             </li>
                             <li v-else class="nav-item">
                                 <Link class="nav-link d-inline-block" :href="route('login')">
-                                    Log In
+                                    ログイン
                                 </Link>
                                 <Link class="nav-link d-inline-block" :href="route('register')">
-                                    Register
+                                    登録
                                 </Link>
                             </li>
                         </ul>
