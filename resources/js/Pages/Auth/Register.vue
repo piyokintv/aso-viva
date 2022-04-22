@@ -6,7 +6,7 @@
 
         <form @submit.prevent="submit">
             <div class="mb-3">
-                <label for="name" class="form-label">名前</label>
+                <label for="name" class="form-label">ユーザー名</label>
                 <input type="text" id="name" class="form-control shadow-sm" v-model="form.name" required autofocus autocomplete="name">
             </div>
 
