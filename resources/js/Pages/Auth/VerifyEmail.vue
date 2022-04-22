@@ -2,7 +2,7 @@
    <BreezeGuestLayout>
         <Head title="Email Verification" />
         <div class="mb-4 text-sm text-muted">
-            ご登録ありがとうございます！確認メールを送信しましたので、メール内のリンクをクリックし登録を完了させて下さい。メールが届かない場合は以下のボタンから再送信をお試し下さい。
+            ご登録ありがとうございます！登録確認メールを送信しましたので、メール内のボタンをクリックし登録メールアドレスが正しい事を確認して下さい。メールが届かない場合は以下のボタンから再送信をお試し下さい。
         </div>
 
         <div class="alert alert-success mb-4" v-if="verificationLinkSent" >
