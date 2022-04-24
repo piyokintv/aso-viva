@@ -1,30 +1,24 @@
 # Laravel Breeze + Inertia + Vuej 3 + Bootstreap 5
 
-This boiler plate is based on the Laravel Breeze starter kit but this replaces Tailwind CSS with Bootstrap 5.
+このスターターキットは、Laravel BreezeのInertia選択においてインストールされるTailwind CSSをBootstrap 5に置き換えたものです。
+## 必須条件
 
-## Requirements
+* PHP 8.0 以降。
 
-* PHP 8.0 or latest
-
-## How to start
+## インストール手順
 
 ```bash
 $ git clone git@github.com:lotsofbytes/breeze-bootstrap.git
 $ cd breeze-bootstrap
-$ cp .env.example .env # edit .env for your local environment
+$ git checkout dev-japanesse-ver
+$ cp .env.example .env # .envを必要に応じて編集してください。
 $ composer install
 $ php artisan key:gen
 $ npm install
 $ php artisan migrate --seed
 $ php artisan serve
 ```
-## Support a project placed in the sub directory
-
-Please use the branch, dev-support-subdir.
-
-[inertiajs/inertia-laravel](https://github.com/inertiajs/inertia-laravel) (v0.5.4) has an sub directory installation [issue](https://github.com/inertiajs/inertia-laravel/issues/359). The branch has a fix by kimhf.
-
-## See Also
+## 参照
 
 [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)
 
