@@ -6,7 +6,7 @@ module.exports = {
   'extends': [
     // 'airbnb-base',
     'plugin:vue/vue3-recommended',
-    // '.eslintrc-todo.json'
+    '.eslintrc-todo.json'
   ],
   'parserOptions': {
     'ecmaVersion': 'latest',
