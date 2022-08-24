@@ -1,0 +1,147 @@
+{
+  "overrides": [
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/html-closing-bracket-spacing": "off"
+      },
+      "files": [
+        "resources/js/Components/ApplicationLogo.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/singleline-html-element-content-newline": "off"
+      },
+      "files": [
+        "resources/js/Components/ValidationErrors.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/multiline-html-element-content-newline": "off",
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/html-self-closing": "off",
+        "vue/attributes-order": "off",
+        "vue/singleline-html-element-content-newline": "off"
+      },
+      "files": [
+        "resources/js/Layouts/Authenticated.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off",
+        "vue/multiline-html-element-content-newline": "off"
+      },
+      "files": [
+        "resources/js/Layouts/Guest.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/attributes-order": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/ConfirmPassword.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/attributes-order": "off",
+        "vue/require-default-prop": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/ForgotPassword.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/attributes-order": "off",
+        "vue/singleline-html-element-content-newline": "off",
+        "vue/multiline-html-element-content-newline": "off",
+        "vue/require-default-prop": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/Login.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/attributes-order": "off",
+        "vue/singleline-html-element-content-newline": "off",
+        "vue/multiline-html-element-content-newline": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/Register.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/attributes-order": "off",
+        "vue/singleline-html-element-content-newline": "off",
+        "vue/multiline-html-element-content-newline": "off",
+        "vue/require-default-prop": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/ResetPassword.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/html-indent": "off",
+        "vue/attributes-order": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/html-closing-bracket-spacing": "off",
+        "vue/singleline-html-element-content-newline": "off",
+        "vue/require-default-prop": "off"
+      },
+      "files": [
+        "resources/js/Pages/Auth/VerifyEmail.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off"
+      },
+      "files": [
+        "resources/js/Pages/Dashboard.vue"
+      ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/html-self-closing": "off",
+        "vue/attributes-order": "off",
+        "vue/singleline-html-element-content-newline": "off",
+        "vue/multiline-html-element-content-newline": "off",
+        "vue/html-closing-bracket-spacing": "off",
+        "vue/require-default-prop": "off"
+      },
+      "files": [
+        "resources/js/Pages/Welcome.vue"
+      ]
+    }
+  ]
+}
