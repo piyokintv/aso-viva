@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+name: run-php-cs-fixer
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the develop branch
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --prefer-dist --working-dir=tools/php-cs-fixer
+      - name: PHP-CS-Fixer Version
+        run: ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --version
+      - name: PHP-CS-Fixer Dry Run
+        run: ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --verbose --dry-run
