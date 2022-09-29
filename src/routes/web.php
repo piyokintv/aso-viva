@@ -28,4 +28,6 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('search-places', App\Http\Controllers\SearchPlacesController::class)->only(['index']);
+
 require __DIR__.'/auth.php';
