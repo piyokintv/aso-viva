@@ -142,6 +142,14 @@
       "files": [
         "resources/js/Pages/Welcome.vue"
       ]
+    },
+    {
+      "rules": {
+        "vue/multi-word-component-names": "off"
+      },
+      "files": [
+        "resources/js/Pages/SearchPlaces/*.{js,vue}"
+      ]
     }
   ]
 }
