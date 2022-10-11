@@ -5,7 +5,10 @@
   >
     <template #item="{element}">
       <div>
-        {{ element.name }}
+        <input
+          v-model="element.name"
+          type="text"
+        >
       </div>
     </template>
   </draggable>
