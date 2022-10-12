@@ -1,4 +1,7 @@
 <template>
+  <button>
+    追加
+  </button>
   <draggable
     v-model="places"
     item-key="id"
@@ -9,6 +12,9 @@
           v-model="element.name"
           type="text"
         >
+        <button>
+          削除
+        </button>
       </div>
     </template>
   </draggable>
