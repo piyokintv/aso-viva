@@ -3,7 +3,7 @@
     追加
   </button>
   <draggable
-    v-model="places"
+    :list="places"
     item-key="id"
   >
     <template #item="{element}">
@@ -22,27 +22,30 @@
 
 <script>
 import draggable from 'vuedraggable';
+import { reactive } from 'vue';
 
 export default {
   components: {
     draggable,
   },
-  data() {
+  setup() {
+    const places = reactive([
+      {
+        id: 1,
+        name: 'ああああ',
+      },
+      {
+        id: 2,
+        name: 'いいいい',
+      },
+      {
+        id: 3,
+        name: 'うううう',
+      }
+    ]);
+
     return {
-      places: [
-        {
-          id: 1,
-          name: 'ああああ',
-        },
-        {
-          id: 2,
-          name: 'いいいい',
-        },
-        {
-          id: 3,
-          name: 'うううう',
-        }
-      ],
+      places,
     };
   },
 }
