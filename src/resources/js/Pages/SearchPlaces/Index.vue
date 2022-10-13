@@ -1,18 +1,22 @@
 <template>
-  <button>
+  <button
+    @click="addPlace()"
+  >
     追加
   </button>
   <draggable
     :list="places"
     item-key="id"
   >
-    <template #item="{element}">
+    <template #item="{ element, index }">
       <div>
         <input
           v-model="element.name"
           type="text"
         >
-        <button>
+        <button
+          @click="deletePlace(index)"
+        >
           削除
         </button>
       </div>
@@ -44,8 +48,25 @@ export default {
       }
     ]);
 
+    let nextId = places.length;
+
+    const addPlace = () => {
+      nextId++;
+
+      places.push({
+        id: nextId,
+        name: `追加されたやつ${nextId}`,
+      });
+    };
+
+    const deletePlace = (index) => {
+      places.splice(index, 1);
+    };
+
     return {
       places,
+      addPlace,
+      deletePlace,
     };
   },
 }
