@@ -4,7 +4,7 @@
       for="places-textarea"
       class="form-label"
     >
-      Example textarea
+      行く予定の場所
     </label>
     <textarea
       id="places-textarea"
