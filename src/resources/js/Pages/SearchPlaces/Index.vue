@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { useForm } from '@inertiajs/inertia-vue3';
+
 export default {
 
 }
