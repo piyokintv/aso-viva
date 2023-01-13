@@ -1,13 +1,13 @@
 <template>
   <div class="mb-3">
     <label
-      for="exampleFormControlTextarea1"
+      for="places-textarea"
       class="form-label"
     >
       Example textarea
     </label>
     <textarea
-      id="exampleFormControlTextarea1"
+      id="places-textarea"
       class="form-control"
       rows="3"
       placeholder="東京駅、東京タワー、東京スカイツリー"
