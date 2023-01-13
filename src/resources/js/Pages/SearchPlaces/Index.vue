@@ -25,7 +25,15 @@
 import { useForm } from '@inertiajs/inertia-vue3';
 
 export default {
+  setup() {
+    const form = useForm({
+      place: null,
+    });
 
+    return {
+      form,
+    };
+  },
 }
 </script>
 
