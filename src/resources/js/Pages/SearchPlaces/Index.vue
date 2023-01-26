@@ -1,5 +1,8 @@
 <template>
-  <div class="mb-3">
+  <form
+    class="mb-3"
+    @submit.prevent="searchPlaces()"
+  >
     <label
       for="places-textarea"
       class="form-label"
@@ -19,7 +22,7 @@
     >
       おすすめの場所を検索
     </button>
-  </div>
+  </form>
 </template>
 
 <script>
