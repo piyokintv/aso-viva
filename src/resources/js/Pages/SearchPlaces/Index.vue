@@ -1,5 +1,8 @@
 <template>
-  <div class="mb-3">
+  <form
+    class="mb-3"
+    @submit.prevent="searchPlaces()"
+  >
     <label
       for="places-textarea"
       class="form-label"
@@ -8,6 +11,7 @@
     </label>
     <textarea
       id="places-textarea"
+      v-model="form.place"
       class="form-control"
       rows="3"
       placeholder="東京駅、東京タワー、東京スカイツリー"
@@ -18,12 +22,27 @@
     >
       おすすめの場所を検索
     </button>
-  </div>
+  </form>
 </template>
 
 <script>
-export default {
+import { useForm } from '@inertiajs/inertia-vue3';
 
+export default {
+  setup() {
+    const form = useForm({
+      place: null,
+    });
+
+    const searchPlaces = () => {
+      console.log('メソッド発火');
+    };
+
+    return {
+      form,
+      searchPlaces,
+    };
+  },
 }
 </script>
 
