@@ -31,8 +31,13 @@ export default {
       place: null,
     });
 
+    const searchPlaces = () => {
+      console.log('メソッド発火');
+    };
+
     return {
       form,
+      searchPlaces,
     };
   },
 }
