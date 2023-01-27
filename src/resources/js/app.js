@@ -11,7 +11,7 @@ const appName = window.document.getElementsByTagName('title')[0]?.innerText || '
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => require(`./Pages/${name}`),
-    setup({ el, app, props, plugin }) {
+    setup({ el, App, props, plugin }) {
         createApp({ render: () => h(app, props) })
             .mixin({ methods: { route } })
             .use(plugin)
