@@ -24,7 +24,7 @@
 <script setup>
 import { computed } from 'vue';
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
+import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const props = defineProps({
     status: String,

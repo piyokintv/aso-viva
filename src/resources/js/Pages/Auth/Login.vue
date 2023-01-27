@@ -38,7 +38,7 @@
 <script setup>
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
+import { Head, Link, useForm } from '@inertiajs/vue3';
 
 defineProps({
     canResetPassword: Boolean,

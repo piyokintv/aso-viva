@@ -26,7 +26,7 @@
 <script setup>
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import { Head, useForm } from '@inertiajs/inertia-vue3';
+import { Head, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
     password: '',
