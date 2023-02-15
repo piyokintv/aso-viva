@@ -34,8 +34,24 @@ export default {
       place: null,
     });
 
-    const searchPlaces = () => {
+    const searchPlaces = async () => {
       console.log('メソッド発火');
+
+      const prompt = 'Google Apps Scriptの活用事例を教えてください';
+
+      const { Configuration, OpenAIApi } = require("openai");
+      const configuration = new Configuration({
+        apiKey: process.env.MIX_OPENAI_API_KEY,
+      });
+      const openai = new OpenAIApi(configuration);
+      const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: prompt,
+        temperature: 0.9,
+        max_tokens: 1024,
+      });
+
+      console.log(response);
     };
 
     return {
