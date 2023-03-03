@@ -23,7 +23,7 @@
       おすすめの場所を検索
     </button>
   </form>
-  <div id="map"></div>
+  <div id="map" />
 </template>
 
 <script>
