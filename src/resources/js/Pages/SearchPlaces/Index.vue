@@ -28,6 +28,8 @@
 
 <script>
 import { useForm } from '@inertiajs/vue3';
+import { Loader } from "@googlemaps/js-api-loader";
+import { onMounted } from 'vue';
 
 export default {
   setup() {
