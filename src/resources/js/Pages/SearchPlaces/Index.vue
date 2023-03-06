@@ -59,6 +59,7 @@ export default {
 
     let map;
     let service;
+    let bounds;
 
     onMounted(() => {
       const loader = new Loader({
@@ -90,10 +91,14 @@ export default {
 
     const callback = (results, status) => {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
+        bounds = new google.maps.LatLngBounds();
+
         for (let i = 0; i < results.length; i++) {
           let place = results[i];
           createMarker(results[i]);
         }
+
+        map.fitBounds(bounds);
       }
     }
 
@@ -106,6 +111,12 @@ export default {
         map,
         position: place.geometry.location,
       });
+
+      if (place.geometry.viewport) {
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
     }
 
     return {
