@@ -58,6 +58,7 @@ export default {
     };
 
     let map;
+    let service;
 
     onMounted(() => {
       const loader = new Loader({
@@ -77,6 +78,15 @@ export default {
         });
       });
     });
+
+    const searchPlacesWithGoogleMaps = () => {
+      let request = {
+        query: form.place,
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, callback);
+    }
 
     return {
       form,
