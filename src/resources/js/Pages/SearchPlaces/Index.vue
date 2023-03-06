@@ -97,6 +97,17 @@ export default {
       }
     }
 
+    const createMarker = (place) => {
+      if (!place.geometry || !place.geometry.location) {
+        return;
+      }
+
+      const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+      });
+    }
+
     return {
       form,
       searchPlaces,
