@@ -55,6 +55,8 @@ export default {
       });
 
       console.log(response);
+
+      searchPlacesWithGoogleMaps()
     };
 
     let map;
