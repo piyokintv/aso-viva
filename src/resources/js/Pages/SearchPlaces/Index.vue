@@ -55,9 +55,13 @@ export default {
       });
 
       console.log(response);
+
+      searchPlacesWithGoogleMaps()
     };
 
     let map;
+    let service;
+    let bounds;
 
     onMounted(() => {
       const loader = new Loader({
@@ -77,6 +81,45 @@ export default {
         });
       });
     });
+
+    const searchPlacesWithGoogleMaps = () => {
+      let request = {
+        query: form.place,
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, callback);
+    }
+
+    const callback = (results, status) => {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        bounds = new google.maps.LatLngBounds();
+
+        for (let i = 0; i < results.length; i++) {
+          let place = results[i];
+          createMarker(results[i]);
+        }
+
+        map.fitBounds(bounds);
+      }
+    }
+
+    const createMarker = (place) => {
+      if (!place.geometry || !place.geometry.location) {
+        return;
+      }
+
+      const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+      });
+
+      if (place.geometry.viewport) {
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    }
 
     return {
       form,
