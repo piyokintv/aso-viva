@@ -62,6 +62,7 @@ export default {
     let map;
     let service;
     let bounds;
+    let markers = [];
 
     onMounted(() => {
       const loader = new Loader({
