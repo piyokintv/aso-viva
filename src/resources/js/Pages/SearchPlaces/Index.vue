@@ -120,6 +120,8 @@ export default {
         position: place.geometry.location,
       });
 
+      markers.push(marker);
+
       if (place.geometry.viewport) {
         bounds.union(place.geometry.viewport);
       } else {
