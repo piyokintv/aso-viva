@@ -62,6 +62,7 @@ export default {
     let map;
     let service;
     let bounds;
+    let markers = [];
 
     onMounted(() => {
       const loader = new Loader({
@@ -95,6 +96,11 @@ export default {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         bounds = new google.maps.LatLngBounds();
 
+        markers.forEach((marker) => {
+          marker.setMap(null);
+        });
+        markers = [];
+
         for (let i = 0; i < results.length; i++) {
           let place = results[i];
           createMarker(results[i]);
@@ -113,6 +119,8 @@ export default {
         map,
         position: place.geometry.location,
       });
+
+      markers.push(marker);
 
       if (place.geometry.viewport) {
         bounds.union(place.geometry.viewport);
