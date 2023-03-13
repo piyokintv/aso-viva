@@ -64,6 +64,8 @@ export default {
     let bounds;
     let markers = [];
 
+    let photoUrl = ref('');
+
     onMounted(() => {
       const loader = new Loader({
         apiKey: process.env.MIX_GOOGLE_MAPS_API_KEY,
