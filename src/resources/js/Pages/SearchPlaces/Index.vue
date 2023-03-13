@@ -135,6 +135,7 @@ export default {
     return {
       form,
       searchPlaces,
+      photoUrl,
     };
   },
 }
