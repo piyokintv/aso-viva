@@ -63,6 +63,7 @@ export default {
     let service;
     let bounds;
     let markers = [];
+    let infoWindow;
 
     let photoUrl = ref('');
 
