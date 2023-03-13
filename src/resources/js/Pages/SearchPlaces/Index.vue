@@ -130,6 +130,7 @@ export default {
       marker.addListener('click', () => {
         infoWindow.close();
         infoWindow.setContent(marker.getTitle());
+        infoWindow.open(marker.getMap(), marker);
       });
 
       markers.push(marker);
