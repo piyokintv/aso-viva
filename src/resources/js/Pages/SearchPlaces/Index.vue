@@ -129,6 +129,7 @@ export default {
 
       marker.addListener('click', () => {
         infoWindow.close();
+        infoWindow.setContent(marker.getTitle());
       });
 
       markers.push(marker);
