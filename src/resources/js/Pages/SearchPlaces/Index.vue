@@ -123,6 +123,8 @@ export default {
       const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
+        title: place.name,
+        optimized: false,
       });
 
       markers.push(marker);
