@@ -99,6 +99,7 @@ export default {
     const callback = (results, status) => {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         bounds = new google.maps.LatLngBounds();
+        infoWindow = new google.maps.InfoWindow();
 
         markers.forEach((marker) => {
           marker.setMap(null);
