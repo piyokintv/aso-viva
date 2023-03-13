@@ -131,6 +131,8 @@ export default {
         infoWindow.close();
         infoWindow.setContent(marker.getTitle());
         infoWindow.open(marker.getMap(), marker);
+
+        photoUrl.value = place.photos[0].getUrl();
       });
 
       markers.push(marker);
