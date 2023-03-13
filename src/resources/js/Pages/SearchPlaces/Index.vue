@@ -127,6 +127,9 @@ export default {
         optimized: false,
       });
 
+      marker.addListener('click', () => {
+      });
+
       markers.push(marker);
 
       if (place.geometry.viewport) {
