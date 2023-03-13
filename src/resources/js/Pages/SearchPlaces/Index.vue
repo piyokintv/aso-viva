@@ -24,6 +24,7 @@
     </button>
   </form>
   <div id="map" />
+  <img :src="photoUrl" alt="">
 </template>
 
 <script>
