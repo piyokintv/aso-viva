@@ -128,6 +128,7 @@ export default {
       });
 
       marker.addListener('click', () => {
+        infoWindow.close();
       });
 
       markers.push(marker);
