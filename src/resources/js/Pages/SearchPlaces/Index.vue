@@ -24,12 +24,16 @@
     </button>
   </form>
   <div id="map" />
+  <img
+    :src="photoUrl"
+    alt=""
+  >
 </template>
 
 <script>
 import { useForm } from '@inertiajs/vue3';
 import { Loader } from "@googlemaps/js-api-loader";
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 export default {
   setup() {
@@ -63,6 +67,9 @@ export default {
     let service;
     let bounds;
     let markers = [];
+    let infoWindow;
+
+    let photoUrl = ref('');
 
     onMounted(() => {
       const loader = new Loader({
@@ -95,6 +102,7 @@ export default {
     const callback = (results, status) => {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
         bounds = new google.maps.LatLngBounds();
+        infoWindow = new google.maps.InfoWindow();
 
         markers.forEach((marker) => {
           marker.setMap(null);
@@ -118,6 +126,16 @@ export default {
       const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
+        title: place.name,
+        optimized: false,
+      });
+
+      marker.addListener('click', () => {
+        infoWindow.close();
+        infoWindow.setContent(marker.getTitle());
+        infoWindow.open(marker.getMap(), marker);
+
+        photoUrl.value = place.photos[0].getUrl();
       });
 
       markers.push(marker);
@@ -132,6 +150,7 @@ export default {
     return {
       form,
       searchPlaces,
+      photoUrl,
     };
   },
 }
