@@ -51,11 +51,9 @@ export default {
         apiKey: process.env.MIX_OPENAI_API_KEY,
       });
       const openai = new OpenAIApi(configuration);
-      const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: prompt,
-        temperature: 0.9,
-        max_tokens: 1024,
+      const response = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: "Hello world" }],
       });
 
       console.log(response);
