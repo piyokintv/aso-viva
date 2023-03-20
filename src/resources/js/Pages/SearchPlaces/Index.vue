@@ -53,7 +53,11 @@ export default {
       const openai = new OpenAIApi(configuration);
       const response = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: "Hello world" }],
+        messages: [
+          { role: "system", content: process.env.MIX_SYSTEM_CONTENT },
+          { role: "user", content: process.env.MIX_PROMPT },
+          { role: "user", content: form.place },
+        ],
       });
 
       console.log(response);
