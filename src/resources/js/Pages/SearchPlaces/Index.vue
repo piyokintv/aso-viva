@@ -65,7 +65,7 @@ export default {
       const results = messageContent.match(regex);
       const recommendedPlace = results[1];
 
-      searchPlacesWithGoogleMaps()
+      searchPlacesWithGoogleMaps(recommendedPlace);
     };
 
     let map;
@@ -95,9 +95,9 @@ export default {
       });
     });
 
-    const searchPlacesWithGoogleMaps = () => {
+    const searchPlacesWithGoogleMaps = (recommendedPlace) => {
       let request = {
-        query: form.place,
+        query: recommendedPlace,
       };
 
       service = new google.maps.places.PlacesService(map);
