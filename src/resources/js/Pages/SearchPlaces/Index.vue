@@ -60,7 +60,10 @@ export default {
         ],
       });
 
-      console.log(response);
+      const messageContent = response.data.choices[0].message.content;
+      const regex = new RegExp(process.env.MIX_REGEX);
+      const results = messageContent.match(regex);
+      const recommendedPlace = results[1];
 
       searchPlacesWithGoogleMaps()
     };
