@@ -53,12 +53,19 @@ export default {
       const openai = new OpenAIApi(configuration);
       const response = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: "Hello world" }],
+        messages: [
+          { role: "system", content: process.env.MIX_SYSTEM_CONTENT },
+          { role: "user", content: process.env.MIX_PROMPT },
+          { role: "user", content: form.place },
+        ],
       });
 
-      console.log(response);
+      const messageContent = response.data.choices[0].message.content;
+      const regex = new RegExp(process.env.MIX_REGEX);
+      const results = messageContent.match(regex);
+      const recommendedPlace = results[1];
 
-      searchPlacesWithGoogleMaps()
+      searchPlacesWithGoogleMaps(recommendedPlace);
     };
 
     let map;
@@ -88,9 +95,9 @@ export default {
       });
     });
 
-    const searchPlacesWithGoogleMaps = () => {
+    const searchPlacesWithGoogleMaps = (recommendedPlace) => {
       let request = {
-        query: form.place,
+        query: recommendedPlace,
       };
 
       service = new google.maps.places.PlacesService(map);
