@@ -13,7 +13,7 @@
       <textarea
         id="places-textarea"
         v-model="form.place"
-      class="form-control"
+        class="form-control mb-3"
         rows="3"
         placeholder="東京駅、東京タワー、東京スカイツリー"
       />
