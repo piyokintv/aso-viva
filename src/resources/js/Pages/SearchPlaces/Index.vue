@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <form
-    class="mb-3"
+      class="mb-3 text-center"
       @submit.prevent="searchPlaces()"
     >
       <label
