@@ -38,6 +38,7 @@
           <img
             :src="photoUrl"
             alt=""
+            class="img-fluid"
           >
         </div>
       </div>
