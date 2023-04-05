@@ -26,13 +26,17 @@
     </form>
     <div class="row">
       <div class="col-sm-6">
+        <div class="ratio ratio-1x1">
   <div id="map" />
+        </div>
       </div>
       <div class="col-sm-6">
+        <div class="ratio ratio-1x1">
           <img
             :src="photoUrl"
             alt=""
           >
+        </div>
       </div>
     </div>
   </div>
