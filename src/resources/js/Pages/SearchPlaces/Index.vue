@@ -1,33 +1,35 @@
 <template>
-  <form
+  <div class="container">
+    <form
     class="mb-3"
-    @submit.prevent="searchPlaces()"
-  >
-    <label
-      for="places-textarea"
-      class="form-label"
+      @submit.prevent="searchPlaces()"
     >
-      行く予定の場所
-    </label>
-    <textarea
-      id="places-textarea"
-      v-model="form.place"
+      <label
+        for="places-textarea"
+        class="form-label"
+      >
+        行く予定の場所
+      </label>
+      <textarea
+        id="places-textarea"
+        v-model="form.place"
       class="form-control"
-      rows="3"
-      placeholder="東京駅、東京タワー、東京スカイツリー"
-    />
-    <button
-      class="btn btn-primary"
-      type="submit"
-    >
-      おすすめの場所を検索
-    </button>
-  </form>
+        rows="3"
+        placeholder="東京駅、東京タワー、東京スカイツリー"
+      />
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        おすすめの場所を検索
+      </button>
+    </form>
   <div id="map" />
-  <img
-    :src="photoUrl"
-    alt=""
-  >
+          <img
+            :src="photoUrl"
+            alt=""
+          >
+  </div>
 </template>
 
 <script>
@@ -162,7 +164,4 @@ export default {
 </script>
 
 <style scoped>
-#map {
-  height: 500px;
-}
 </style>
