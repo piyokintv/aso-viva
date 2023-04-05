@@ -27,7 +27,10 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="ratio ratio-1x1">
-  <div id="map" />
+          <div
+            id="map"
+            class="h-100"
+          />
         </div>
       </div>
       <div class="col-sm-6">
