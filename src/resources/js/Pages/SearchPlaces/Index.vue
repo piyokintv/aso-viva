@@ -24,11 +24,17 @@
         おすすめの場所を検索
       </button>
     </form>
+    <div class="row">
+      <div class="col-sm-6">
   <div id="map" />
+      </div>
+      <div class="col-sm-6">
           <img
             :src="photoUrl"
             alt=""
           >
+      </div>
+    </div>
   </div>
 </template>
 
